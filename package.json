@@ -1,5 +1,5 @@
 {
-  "name": "react-native-simple-button",
+  "name": "react-native-osd-simple-button",
   "version": "1.0.0",
   "description": "A button that implement most of the HTML attributes and flexes itself (that is not a word)",
   "main": "Button.js",
