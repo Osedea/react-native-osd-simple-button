@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A button that implement most of the HTML attributes and flexes itself (that is not a word)",
   "main": "Button.js",
+  "dependencies": {
+    "react": "^15.0.2",
+    "react-native": "^0.26.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,9 +23,5 @@
   "bugs": {
     "url": "https://github.com/Osedea/react-native-simple-button/issues"
   },
-  "homepage": "https://github.com/Osedea/react-native-simple-button#readme",
-  "dependencies": {
-    "react": "^15.0.2",
-    "react-native": "^0.26.2"
-  }
+  "homepage": "https://github.com/Osedea/react-native-simple-button#readme"
 }

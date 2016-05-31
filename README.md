@@ -1,6 +1,8 @@
 # react-native-osd-simple-button
 A button that implement most of the HTML attributes and flexes itself (that is not a word)
 
+For react-native v0.26+
+
 # Properties
 
 Property Name | Type
