@@ -45,7 +45,7 @@ export default class Button extends Component {
     };
 
     static defaultProps = {
-      underlayColor: colors.defaultUnderlayColorrr,
+      underlayColor: colors.defaultUnderlayColor,
     };
 
     render() {
