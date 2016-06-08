@@ -8,11 +8,11 @@ import {
 
 const colors = {
   defaultBorderColor: "#3B373C",
+  defaultUnderlayColor: 'rgba(0, 0, 0, 0.3)',
 };
 
 const styles = StyleSheet.create({
     container: {
-        height: 40,
         borderWidth: 1,
         borderColor: colors.defaultBorderColor,
         marginTop: 5,
@@ -42,6 +42,10 @@ export default class Button extends Component {
         textStyle: Text.propTypes.style,
         underlayColor: React.PropTypes.string,
         uppercase: React.PropTypes.bool,
+    };
+
+    static defaultProps = {
+      underlayColor: colors.defaultUnderlayColorrr,
     };
 
     render() {
