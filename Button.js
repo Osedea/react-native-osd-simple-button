@@ -7,8 +7,8 @@ import {
 } from 'react-native';
 
 const colors = {
-  defaultBorderColor: "#3B373C",
-  defaultUnderlayColor: 'rgba(0, 0, 0, 0.3)',
+    defaultBorderColor: "#3B373C",
+    defaultUnderlayColor: 'rgba(0, 0, 0, 0.3)',
 };
 
 const styles = StyleSheet.create({
@@ -18,6 +18,10 @@ const styles = StyleSheet.create({
         marginTop: 5,
         marginBottom: 5,
         borderRadius: 3,
+    },
+    overflow: {
+        overflow: 'hidden',
+        flex: 1,
     },
     text: {
         fontWeight: 'bold',
@@ -40,6 +44,7 @@ export default class Button extends Component {
         text: React.PropTypes.string,
         textContainerStyle: View.propTypes.style,
         textStyle: Text.propTypes.style,
+        touchableContainerStyle: View.propTypes.style,
         underlayColor: React.PropTypes.string,
         uppercase: React.PropTypes.bool,
     };
@@ -59,33 +64,40 @@ export default class Button extends Component {
                     this.props.containerStyle,
                 ]}
             >
-                <TouchableHighlight
-                    underlayColor={this.props.underlayColor}
-                    onPress={this.props.onPress}
+                <View
+                    style={[
+                        styles.overflow,
+                        this.props.touchableContainerStyle,
+                    ]}
                 >
-                    <View
-                        style={[
-                            styles.textContainer,
-                            this.props.textContainerStyle,
-                        ]}
+                    <TouchableHighlight
+                        underlayColor={this.props.underlayColor}
+                        onPress={this.props.onPress}
                     >
-                        {this.props.text
-                            ? <Text
-                                style={[
-                                    styles.text,
-                                    this.props.textStyle,
-                                ]}
-                            >
-                                {this.props.uppercase
-                                    ? this.props.text.toUpperCase()
-                                    : this.props.text
-                                }
-                            </Text>
-                            : null
-                        }
-                        {this.props.children}
-                    </View>
-                </TouchableHighlight>
+                        <View
+                            style={[
+                                styles.textContainer,
+                                this.props.textContainerStyle,
+                            ]}
+                        >
+                            {this.props.text
+                                ? <Text
+                                    style={[
+                                        styles.text,
+                                        this.props.textStyle,
+                                    ]}
+                                >
+                                    {this.props.uppercase
+                                        ? this.props.text.toUpperCase()
+                                        : this.props.text
+                                    }
+                                </Text>
+                                : null
+                            }
+                            {this.props.children}
+                        </View>
+                    </TouchableHighlight>
+                </View>
             </View>
         );
     }
