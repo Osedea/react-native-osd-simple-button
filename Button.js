@@ -40,7 +40,7 @@ export default class Button extends Component {
             React.PropTypes.node,
         ]),
         containerStyle: View.propTypes.style,
-        elevation: View.propTypes.elevation,
+        elevation: React.PropTypes.number,
         onPress: React.PropTypes.func.isRequired,
         text: React.PropTypes.string,
         textContainerStyle: View.propTypes.style,
