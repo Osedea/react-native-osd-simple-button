@@ -40,6 +40,7 @@ export default class Button extends Component {
             React.PropTypes.node,
         ]),
         containerStyle: View.propTypes.style,
+        elevation: View.propTypes.elevation,
         onPress: React.PropTypes.func.isRequired,
         text: React.PropTypes.string,
         textContainerStyle: View.propTypes.style,
@@ -63,6 +64,7 @@ export default class Button extends Component {
                         : {},
                     this.props.containerStyle,
                 ]}
+                elevation={this.props.elevation}
             >
                 <View
                     style={[

@@ -1,6 +1,6 @@
 {
   "name": "react-native-osd-simple-button",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A button that implement most of the HTML attributes and flexes itself (that is not a word)",
   "main": "Button.js",
   "devDependencies": {
