@@ -21,7 +21,6 @@ const styles = StyleSheet.create({
     },
     overflow: {
         overflow: 'hidden',
-        flex: 1,
     },
     text: {
         fontWeight: 'bold',
