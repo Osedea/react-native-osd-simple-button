@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Osedea/react-native-simple-button/issues"
   },
-  "homepage": "https://github.com/Osedea/react-native-simple-button#readme"
+  "homepage": "https://github.com/Osedea/react-native-simple-button#readme",
+  "dependencies": {
+    "prop-types": "^15.6.0"
+  }
 }
