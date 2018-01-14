@@ -5,6 +5,7 @@ import {
     TouchableHighlight,
     View,
 } from 'react-native';
+import PropTypes from 'prop-types'
 
 const colors = {
     defaultBorderColor: "#3B373C",
@@ -33,20 +34,20 @@ const styles = StyleSheet.create({
 
 export default class Button extends Component {
     static propTypes = {
-        backgroundColor: React.PropTypes.string,
-        children: React.PropTypes.oneOfType([
-            React.PropTypes.arrayOf(React.PropTypes.node),
-            React.PropTypes.node,
+        backgroundColor: PropTypes.string,
+        children: PropTypes.oneOfType([
+            PropTypes.arrayOf(PropTypes.node),
+            PropTypes.node,
         ]),
-        containerStyle: View.propTypes.style,
-        elevation: React.PropTypes.number,
-        onPress: React.PropTypes.func.isRequired,
-        text: React.PropTypes.string,
-        textContainerStyle: View.propTypes.style,
-        textStyle: Text.propTypes.style,
-        touchableContainerStyle: View.propTypes.style,
-        underlayColor: React.PropTypes.string,
-        uppercase: React.PropTypes.bool,
+        containerStyle: PropTypes.style,
+        elevation: PropTypes.number,
+        onPress: PropTypes.func.isRequired,
+        text: PropTypes.string,
+        textContainerStyle: PropTypes.style,
+        textStyle: PropTypes.style,
+        touchableContainerStyle: PropTypes.style,
+        underlayColor: PropTypes.string,
+        uppercase: PropTypes.bool,
     };
 
     static defaultProps = {
